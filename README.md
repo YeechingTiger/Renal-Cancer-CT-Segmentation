@@ -10,7 +10,7 @@ Up to 30% of renal masses ≤4cm are found to be benign at the time of surgical 
 This patient cohort includes patients who underwent kidney nephrectomy for suspected renal malignancy at the UF Health Shands Hospital. The CT images before the kidney nephrectomy of these patients were extracted from UF Health IDR.
 For each CT image, we need to obtain the segmentation of the kidney and kidney tumor for the downstream prediction task. We will adopt a two-step approach for the segmentation:
 1. Apply automatic segmentation models on the raw data to generate the segmentation for kidney and kidney tumor.
-2. An manual segmentation team will examine the accuracy of the automatic segmentation and manually improve the segementation if needed.
+2. A manual segmentation team will examine the accuracy of the automatic segmentation and manually improve the segementation if needed.
 
 ## Segmentation improvement process
 ### Task management
@@ -42,7 +42,7 @@ Broadly, our annotation process is as follows.
     ![part](https://github.com/YeechingTiger/Renal-Cancer-CT-Segmentation/blob/main/partial_issues.png?raw=true)
     **Figure 3**. Partial segmentation issue
     * If a segmentation for kidney or tumor is missing, circle it and add "+++" symbol to indicate "annotate this part". (**Figure 4**)
-    * If a segmentation is totally wrong and need to be removed, use "---  ---  ---" symbol. (**Figure 4**)
+    * If a segmentation is totally wrong and need to be removed, use "---" symbol. (**Figure 4**)
     ![part](https://github.com/YeechingTiger/Renal-Cancer-CT-Segmentation/blob/main/total_issues.png?raw=true)
     **Figure 4**. Missing or wrong segmentation issues
 
