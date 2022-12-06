@@ -33,5 +33,27 @@ Each task has several Status (shown in **Figure 1**):
 
 ### Annotation process
 Broadly, our annotation process is as follows.
-1. The **Coordinators** will create the task, add neccessary information (e.g., CT file location), and assign an expert and a trainee for the task (**Figure 1** and **Figure 2**)
-2. 
+1. The **Coordinators** will create the task, add neccessary information (e.g., CT file location), and assign an expert and a trainee for the task (**Figure 1** and **Figure 2**). For each task, there is a specific channel (i.e., Github Issues) in which the coordinator, expert and trainee could discuss the annotation.
+![Task information](https://github.com/YeechingTiger/Renal-Cancer-CT-Segmentation/blob/main/task_information.png?raw=true)
+**Figure 2**. Neccessary information for a task
+
+2. The **Expert** will get a notification of an assigned task, and begin to examine the automatic segmentation result. A web-based segmentation tool call MedSeg will be used to examine and modify the existing segmention. The **Expert** will complete the following steps:
+    * If specific segmentation is too large or small, circle the kidney or tumor and add "-" or "+" symbols to indicate the improvement needed. (**Figure 3**)
+    ![part](https://github.com/YeechingTiger/Renal-Cancer-CT-Segmentation/blob/main/partial_issues.png?raw=true)
+    **Figure 3**. Partial segmentation issue
+    * If a segmentation for kidney or tumor is missing, circle it and add "+++" symbol to indicate "annotate this part". (**Figure 4**)
+    * If a segmentation is totally wrong and need to be removed, use "---  ---  ---" symbol. (**Figure 4**)
+    ![part](https://github.com/YeechingTiger/Renal-Cancer-CT-Segmentation/blob/main/total_issues.png?raw=true)
+    **Figure 4**. Missing or wrong segmentation issues
+
+    Meanwhile, the expert could add any comments in the task channel to guide the trainee to modify the current segmentation. Note that the CT images are in 3D format, thus there could be a series of problematic CT slides for one segmentation issue, and the expert could only annotate several slides and the trainee need to figure out other slides.
+    When the improve guidelines are finished (for both image annotation and task channel comments), the expert need to download the current segmentation files and then upload to a shared Dropbox for this task, and then change the task status to **In Trainee Annotation Progress**.
+
+3. The **Trainee** should get a notification to indicate he/she could start the segmentation improvement. According to the expert guidelines, the trainee will use the MedSeg tool to modify the segmention, remove expert's guideline and download the final clean segmentation result. Then, the segmentation result file need to be uploaded to the shared Dropbox, too. Then, the status of the task should be change to **In Expert Review**.
+
+4. The **Expert** should get a notification which indicates that the task need to be reviewed. If any issue identified, the expert will create the new guideline, and notify the trainee to modify the segmentation. If the current segmention is approved, the expert will change the task status to **Done**.
+
+## Annotation Tool - MedSeg
+* Home page: https://www.medseg.ai/
+* Youtube tutorial from MedSeg: https://www.youtube.com/channel/UCSexzngll7DQoVo923iBjNA
+* Youtube tutorial for this project: **TBD, will need a student of Dr. Jie Xu to do that. Xing could give some help.**
