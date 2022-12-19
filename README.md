@@ -57,3 +57,4 @@ Broadly, our annotation process is as follows.
 * Home page: https://www.medseg.ai/
 * Youtube tutorial from MedSeg: https://www.youtube.com/channel/UCSexzngll7DQoVo923iBjNA
 * Youtube tutorial for this project: **TBD, will need a student of Dr. Jie Xu to do that. Xing could give some help.**
+* Recommended video for basic fuction introduction: https://www.youtube.com/watch?v=Bw_oxp0fV88 (further modificatons may be required to accommodate real CT images that we have).
